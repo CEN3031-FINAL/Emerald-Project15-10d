@@ -77,8 +77,8 @@ import { Link } from 'react-router-dom'
         {announcements.map((announcement, index) => (
           <div key={index} className="announcement-item"> 
             <p> <span className="info-label"> PLEASE READ: </span> </p>
-            <p>Title: {announcement.Title}</p>
-            <p>Content: {announcement.Content}</p>
+            <p><span className="info-label">Title: </span>{announcement.Title}</p>
+            <p><span className="info-label">Content: </span>{announcement.Content}</p>
             <p> <span className="info-label"> Urgency:  </span>
               <span 
                 style={{
