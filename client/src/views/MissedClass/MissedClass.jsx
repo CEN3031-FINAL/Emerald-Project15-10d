@@ -21,7 +21,6 @@ import { Link } from 'react-router-dom'
   }
 
   const MissedMaterials = ({ resources }) => {
-    const [learningStandard, setLessonModule] = useState({});
     return (
       <div className="missed-materials-container">
         {resources.map((resource, index) => (
@@ -104,6 +103,7 @@ import { Link } from 'react-router-dom'
     const [missedDetails, setMissedDetails] = useState({activities: [], videos: [], announcements: []});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isEmptyResponse, setIsEmptyResponse] = useState(false);
 
     useEffect(() => {
       const fetchData = async () => {
@@ -118,6 +118,10 @@ import { Link } from 'react-router-dom'
               videos: firstItem.videos || [],
               announcements: firstItem.announcements || [],
             });
+            setIsEmptyResponse(false); // Reset the empty response state
+          } 
+          else {
+            setIsEmptyResponse(true); // Set empty response state when response is empty
           }
           setIsLoading(false);
         } 
@@ -131,6 +135,7 @@ import { Link } from 'react-router-dom'
     }, []);
 
     if (error) return <div>Error: {error.message}</div>
+    if (isEmptyResponse) return <div>There is no content available for yesterday.</div>; // Display message for empty response
 
     return(
         <div id='missed-class-container'>
