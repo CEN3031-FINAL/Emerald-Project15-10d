@@ -19,6 +19,7 @@ import PlotterLogo from '../Icons/PlotterLogo';
 import { useNavigate } from 'react-router-dom';
 
 let plotId = 1;
+let modalText;
 
 export default function StudentCanvas({ activity }) {
   const [hoverSave, setHoverSave] = useState(false);
@@ -215,7 +216,6 @@ export default function StudentCanvas({ activity }) {
 
   const handleShareProgram = () => {
     setShareProgramModalVisible(true);
-    // TODO: route to another screen or display list of selectable students
   };
 
   // close out modal if student chooses not to share
@@ -364,6 +364,29 @@ export default function StudentCanvas({ activity }) {
       </Menu.Item>
     </Menu>
   );
+
+  // Fetch the boolean value set by the student's parent
+  // This dictates whether or not the share feature is enabled
+  const [modalText, setModalText] = useState('');
+  useEffect(() => {
+    const fetchBooleanValue = async () => {
+      try {
+        const response = await fetch('/server/api/student/models/student.settings.json');
+        const data = await response.json();
+        // Access the boolean value
+        const shareFeatureValue = data.share_feature;
+        // Set different text based on the boolean value
+        if (shareFeatureValue) {
+          setModalText('This feature is enabled.');
+        } else {
+          setModalText('This feature is disabled.');
+        }
+      } catch (error) {
+        console.error('Error fetching student settings:', error);
+      }
+    };
+    fetchBooleanValue();
+  }, []);
 
   return (
     <div id='horizontal-container' className='flex flex-column'>
@@ -528,25 +551,62 @@ export default function StudentCanvas({ activity }) {
           setPlotData={setPlotData}
           plotId={plotId}
         />
-
-        {/* once parent accounts are linked with students, change pop-up to conditionally display "share enabled" or "share disabled" */}
-        {/* For now, a confirm share feature pop up displays */}
-        <Modal
-          title="Share Program"
-          visible={isShareProgramModalVisible}
-          onCancel={() => setShareProgramModalVisible(false)}
-          footer={[
-            <Button key="no" onClick={handleCancelShareProgram}>
-              No, cancel share request
-            </Button>,
-            <Button key="yes" type="primary" onClick={handleShareProgram}>
-              Yes, confirm share request
-            </Button>,
-          ]}
-        >
-          <p>Are you sure you want to share this program?</p>
-        </Modal>
       </div>
+
+      <Modal
+        title="Share Feature Enabled"
+        visible={isShareProgramModalVisible}
+        onCancel={() => setShareProgramModalVisible(false)}
+        footer={[
+          <Button key="no" onClick={handleCancelShareProgram}>
+            Cancel share request
+          </Button>,
+          <Button key="yes" type="primary" onClick={handleCancelShareProgram}>
+            Confirm share request
+          </Button>,
+        ]}
+      >
+      <p>{modalText}</p>
+      <p>Choose a student below to share this program with with:</p>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <Button
+        type="secondary"
+        style={{ marginBottom: '8px', borderRadius: '8px' }}
+        onClick={() => handleShareWithPerson('Ron W.')}
+      >
+        Ron W.
+        </Button>
+      <Button
+        type="secondary"
+        style={{ marginBottom: '8px', borderRadius: '8px' }}
+        onClick={() => handleShareWithPerson('Hermoine G.')}
+      >
+        Hermoine G.
+      </Button>
+      <Button
+        type="secondary"
+      style={{ marginBottom: '8px', borderRadius: '8px' }}
+      onClick={() => handleShareWithPerson('Draco M.')}
+    >
+      Draco M.
+    </Button>
+    <Button
+      type="secondary"
+      style={{ marginBottom: '8px', borderRadius: '8px' }}
+      onClick={() => handleShareWithPerson('Vincent C.')}
+    >
+      Vincent C.
+    </Button>
+
+    <Button
+      type="secondary"
+      style={{ marginBottom: '8px', borderRadius: '8px' }}
+      onClick={() => handleShareWithPerson('Gregory G.')}
+    >
+      Gregory G.
+    </Button>
+  </div>
+</Modal>
 
       {/* This xml is for the blocks' menu we will provide. Here are examples on how to include categories and subcategories */}
       <xml id='toolbox' is='Blockly workspace'>
