@@ -33,6 +33,21 @@ Cloud-based programming interface
 ![missed3](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/51fe772f-d289-4e1e-873d-7abeb974e824)
 
 
+* ### Parent Sign-in and Sign-up verification
+![signup](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/453c49f1-ce52-4532-a355-4310583587b2)
+![signup2](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/392bf480-e79c-4252-824a-b3f9bbe33e3f)
+![signin](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/6553b736-6929-46fe-bd7b-55bbeb356b8c)
+
+
+* ### Student & Shared Programs List
+![list](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/7140fe91-4f16-4a03-9747-0cea1bdde3d6)
+
+## How to update database and server connections
+A lot of it can be found in the README in the scripts directory
+
+
+
+
 
 
 
