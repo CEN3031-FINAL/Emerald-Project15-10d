@@ -27,6 +27,13 @@ Cloud-based programming interface
 ![share2](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/9ffbc988-fbc7-4bf7-a4e5-8013cd6d8568)
 
 
+* ### Important Content Portal
+![missed](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/2386f85b-58d4-4077-9132-e2653b69779b)
+![missed2](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/f6802dfd-122d-4af6-9a2a-61b86744c1a0)
+![missed3](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/51fe772f-d289-4e1e-873d-7abeb974e824)
+
+
+
 
 
 ## Application
