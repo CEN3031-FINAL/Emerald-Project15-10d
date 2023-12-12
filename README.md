@@ -43,7 +43,8 @@ Cloud-based programming interface
 ![list](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/7140fe91-4f16-4a03-9747-0cea1bdde3d6)
 
 ## How to update database and server connections
-A lot of it can be found in the README in the scripts directory
+A lot of it can be found in the README in the `scripts` directory
+[scripts](/scripts#scripts)
 
 
 
