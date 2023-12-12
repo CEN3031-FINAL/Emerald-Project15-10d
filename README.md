@@ -57,10 +57,10 @@ More info can be found in the README in the [scripts](/scripts#scripts) director
    `bash
    docker pull postgres:[tag]
    `
-services:
+```services:
   casmm-db-dev:
     image: postgres:[tag]
-    # ... other configurations ...
+    # ... other configurations ...```
 Replace [tag] with the specific version you wish to use.
 
 2. **Re-run Docker Compose**
