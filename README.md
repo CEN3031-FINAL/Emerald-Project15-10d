@@ -75,6 +75,29 @@ ALWAYS REMEMBER TO BACKUP BEFORE UPDATING.
 ## Update the database and STRAPI dump files in your file directory
 More info can be found in the README in the [scripts](/scripts#scripts) directory
 
+## Outstanding work
+### Enhanced Student Portal
+*Revamped user interface for improved user experience.
+*Optimized for better navigation and accessibility.
+
+### Student Programs Page
+*Overhauled layout for easier program exploration.
+*Streamlined design for enhanced user interaction
+
+### Share Program Feature
+*New feature for easy program sharing among students.
+*Facilitates collaborative learning and engagement.
+
+### Important Content Portal
+*Centralized access to essential materials and announcements.
+*Improved information dissemination and student engagement.
+
+### Parent Authentication Process
+*Stregthened sign-in and sign-up verification for security.
+*Enhanced authentication mechanisms for parents.
+
+## Built upon
+
 ## Application
 
 ### `client` 
