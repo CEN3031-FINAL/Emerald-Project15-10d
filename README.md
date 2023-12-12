@@ -97,6 +97,11 @@ More info can be found in the README in the [scripts](/scripts#scripts) director
 * Enhanced authentication mechanisms for parents.
 
 ## Built upon
+* https://docs.strapi.io/dev-docs/quick-start
+* https://drive.google.com/file/d/1K007KsVYyB-ifSdOJ0q04jBgAbkL0ksB/view
+* https://stackoverflow.com/
+* https://react.dev/learn
+* https://www.docker.com/101-tutorial/
 
 ## Application
 
