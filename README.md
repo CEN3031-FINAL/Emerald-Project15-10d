@@ -42,8 +42,6 @@ Cloud-based programming interface
 * ### Student & Shared Programs List
 ![list](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/7140fe91-4f16-4a03-9747-0cea1bdde3d6)
 
-## How to update database and server connections
-More info can be found in the README in the [scripts](/scripts#scripts) directory
 
 ## Updating database and server connections
 ### Prerequisites
@@ -74,13 +72,8 @@ Ensure that the init_db.sh script runs correctly with the new database container
 
 ALWAYS REMEMBER TO BACKUP BEFORE UPDATING. 
 
-
-
-
-
-
-
-
+## Update the database and STRAPI dump files in your file directory
+More info can be found in the README in the [scripts](/scripts#scripts) directory
 
 ## Application
 
