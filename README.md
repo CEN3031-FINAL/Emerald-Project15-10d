@@ -11,6 +11,9 @@ Cloud-based programming interface
 
 ## Emerald-Project15-10d
 * ### Upgraded and improved upon the student portal/home upon log in
+![studentportal](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/ed44563f-c2c5-4dc1-b541-e68db61f49f0)
+![studentportal2](https://github.com/CEN3031-FINAL/Emerald-Project15-10d/assets/100718093/8fdde2bd-98e0-4f41-bf60-ef36c5fc90bf)
+
 
 
 ## Application
