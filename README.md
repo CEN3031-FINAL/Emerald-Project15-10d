@@ -45,7 +45,33 @@ Cloud-based programming interface
 ## How to update database and server connections
 More info can be found in the README in the [scripts](/scripts#scripts) directory
 
-##
+## Updating database and server connections
+### Prerequisites
+- Docker and Docker Compose installed
+- Current working setup of `casmm-db-dev`
+
+### Steps to Update
+
+1. **Pull the Latest PostgreSQL Image**
+   Update the PostgreSQL image to the latest or desired version.
+   ```bash
+   docker pull postgres:[tag]   
+services:
+  casmm-db-dev:
+    image: postgres:[tag]
+    # ... other configurations ...
+Replace [tag] with the specific version you wish to use.
+
+2. **Re-run Docker Compose**
+  Apply the changes by running:
+`docker-compose up -d`
+This will recreate the casmm-db-dev container with the updated PostgreSQL image.
+
+3. **Verify Database Initialization**
+Ensure that the init_db.sh script runs correctly with the new database container to seed the database as needed.
+
+ALWAYS REMEMBER TO BACKUP BEFORE UPDATING. 
+
 
 
 
