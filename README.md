@@ -54,8 +54,9 @@ More info can be found in the README in the [scripts](/scripts#scripts) director
 
 1. **Pull the Latest PostgreSQL Image**
    Update the PostgreSQL image to the latest or desired version.
-   ```bash
-   docker pull postgres:[tag]   
+   `bash
+   docker pull postgres:[tag]
+   `
 services:
   casmm-db-dev:
     image: postgres:[tag]
